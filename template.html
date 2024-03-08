@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="base-palette.css">
+    <link rel="stylesheet" href="custom-palette.css">
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Helvetica', sans-serif;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .base-container { 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100vw;
+        height: 5vh;
+    }
+
+    .base-container > div 
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    .backgroundColor {
+        background-color: var(--backgroundColor);
+        color: white;
+    }
+
+    .textColor {
+        background-color: var(--textColor);
+        color: white;
+    }
+
+    .buttonColor {
+        background-color: var(--buttonColor);
+        color: white;
+    }
+
+    .button {
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    .surfaceStandard {
+        background-color: var(--colorSurfaceStandard);
+    }
+
+    .surfaceSecondary {
+        background-color: var(--colorSurfaceSecondary);
+    }
+
+    .surfaceTertiary {
+        background-color: var(--colorSurfaceTertiary);
+    }
+
+    .surfaceDisabled {
+        background-color: var(--colorSurfaceDisabled);
+    }
+
+    .surfaceSuccess {
+        background-color: var(--colorSurfaceSuccess);
+    }
+
+    .surfaceDestructive {
+        background-color: var(--colorSurfaceDestructive);
+    }
+
+    .surfaceInfo {
+        background-color: var(--colorSurfaceInfo);
+    }
+
+    .surfaceAction {
+        background-color: var(--colorSurfaceAction);
+    }
+
+    .surfaceAction:hover {
+        background-color: var(--colorSurfaceActionHover);
+    }
+
+    .surfaceActionSecondary {
+        background-color: var(--colorSurfaceActionSecondary);
+    }
+
+    .surfaceActionSecondary:hover {
+        background-color: var(--colorSurfaceActionSecondaryHover);
+    }
+
+    .surfaceInverseStandard {
+        background-color: var(--colorSurfaceInverseStandard);
+    }
+
+    .surfaceInverseSecondary {
+        background-color: var(--colorSurfaceInverseSecondary);
+    }
+
+    .surfaceInverseDisabled {
+        background-color: var(--colorSurfaceInverseDisabled);
+    }
+
+    .textStandard {
+        color: var(--colorTextStandard);
+    }
+
+    .textSecondary {
+        color: var(--colorTextSecondary);
+    }
+
+    .textDisabled {
+        color: var(--colorTextDisabled);
+    }
+
+    .textAction {
+        color: var(--colorTextAction);
+    }
+
+    .textActionContrast {
+        color: var(--colorTextActionContrast);
+    }
+
+    .textInverseStandard {
+        color: var(--colorTextInverseStandard);
+    }
+
+    .textInverseSecondary {
+        color: var(--colorTextInverseSecondary);
+    }
+
+    .textInverseDisabled {
+        color: var(--colorTextInverseDisabled);
+    }
+
+    .textInverseAction {
+        color: var(--colorTextInverseAction);
+    }
+
+    .textInverseActionContrast {
+        color: var(--colorTextInverseActionContrast);
+    }
+
+    .textSuccess {
+        color: var(--colorTextSuccess);
+    }
+
+    .textInverseSuccess {
+        color: var(--colorTextInverseSuccess);
+    }
+
+    .textDestructive {
+        color: var(--colorTextDestructive);
+    }
+
+    .textInverseDestructive {
+        color: var(--colorTextInverseDestructive);
+    }
+
+    .container {
+        display: grid;
+        width: 100vw;
+        height: 95vh;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .container>div {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .first,
+    .backgroundStandard {
+        background-color: var(--colorBackgroundStandard);
+    }
+
+    .second,
+    .backgroundSecondary {
+        background-color: var(--colorBackgroundSecondary);
+    }
+
+    .third,
+    .backgroundTertiary {
+        background-color: var(--colorBackgroundTertiary);
+    }
+
+    .forth,
+    .backgroundSuccess {
+        background-color: var(--colorBackgroundSuccess);
+    }
+
+    .fifth,
+    .backgroundDestructive {
+        background-color: var(--colorBackgroundDestructive);
+    }
+
+    .sixth,
+    .backgroundInverseStandard {
+        background-color: var(--colorBackgroundInverseStandard);
+    }
+
+    .seventh,
+    .backgroundInverseSecondary {
+        background-color: var(--colorBackgroundInverseSecondary);
+    }
+
+    .eighth,
+    .backgroundInverseTertiary {
+        background-color: var(--colorBackgroundInverseTertiary);
+    }
+</style>
+
+<body>
+    <div class="flex">
+        <div class="base-container">
+            <div class="backgroundColor">
+                {backgroundColor}
+            </div>
+            <div class="textColor">
+                {textColor}
+            </div>
+            <div class="buttonColor">
+                {buttonColor}
+            </div>
+        </div>
+        <div class="container">
+            <div class="first">
+                <div class="button backgroundTertiary textStandard">Neutral</div>
+                <div class="button surfaceAction textInverseStandard">Primary</div>
+                <div class="button surfaceInfo textStandard">Info</div>
+                <div class="button surfaceSuccess textInverseStandard">Success</div>
+                <div class="button backgroundSuccess textSuccess">Success alt</div>
+                <div class="button surfaceDestructive textInverseStandard">Error</div>
+                <div class="button backgroundDestructive textDestructive">Error alt</div>
+                <div class="button surfaceDisabled textDisabled">Disabled surface</div>
+                <div class="button surfaceDestructive textInverseStandard">Destructive surface</div>
+                <div class="button surfaceInfo textStandard">Info surface</div>
+                <div class="button surfaceAction textInverseStandard">Action surface</div>
+                <div class="button surfaceActionSecondary textSecondary">Action secondary surface</div>
+                <div class="button surfaceInverseStandard textInverseStandard">Inverse standard surface</div>
+                <div class="button surfaceInverseSecondary textInverseSecondary">Inverse secondary surface</div>
+                <div class="button surfaceInverseDisabled textInverseDisabled">Inverse disabled surface</div>
+            </div>
+            <div class="second">
+                <div class="button backgroundTertiary textStandard">Neutral</div>
+                <div class="button surfaceAction textInverseStandard">Primary</div>
+                <div class="button surfaceInfo textStandard">Info</div>
+                <div class="button surfaceSuccess textInverseStandard">Success</div>
+                <div class="button backgroundSuccess textSuccess">Success alt</div>
+                <div class="button surfaceDestructive textInverseStandard">Error</div>
+                <div class="button backgroundDestructive textDestructive">Error alt</div>
+                <div class="button surfaceDisabled textDisabled">Disabled surface</div>
+                <div class="button surfaceDestructive textInverseStandard">Destructive surface</div>
+                <div class="button surfaceInfo textStandard">Info surface</div>
+                <div class="button surfaceAction textInverseStandard">Action surface</div>
+                <div class="button surfaceActionSecondary textSecondary">Action secondary surface</div>
+                <div class="button surfaceInverseStandard textInverseStandard">Inverse standard surface</div>
+                <div class="button surfaceInverseSecondary textInverseSecondary">Inverse secondary surface</div>
+                <div class="button surfaceInverseDisabled textInverseDisabled">Inverse disabled surface</div>
+            </div>
+            <div class="third">
+                <div class="button backgroundTertiary textStandard">Neutral</div>
+                <div class="button surfaceAction textInverseStandard">Primary</div>
+                <div class="button surfaceInfo textStandard">Info</div>
+                <div class="button surfaceSuccess textInverseStandard">Success</div>
+                <div class="button backgroundSuccess textSuccess">Success alt</div>
+                <div class="button surfaceDestructive textInverseStandard">Error</div>
+                <div class="button backgroundDestructive textDestructive">Error alt</div>
+                <div class="button surfaceDisabled textDisabled">Disabled surface</div>
+                <div class="button surfaceDestructive textInverseStandard">Destructive surface</div>
+                <div class="button surfaceInfo textStandard">Info surface</div>
+                <div class="button surfaceAction textInverseStandard">Action surface</div>
+                <div class="button surfaceActionSecondary textSecondary">Action secondary surface</div>
+                <div class="button surfaceInverseStandard textInverseStandard">Inverse standard surface</div>
+                <div class="button surfaceInverseSecondary textInverseSecondary">Inverse secondary surface</div>
+                <div class="button surfaceInverseDisabled textInverseDisabled">Inverse disabled surface</div>
+            </div>
+            <div class="forth">
+                <div class="button backgroundTertiary textStandard">Neutral</div>
+                <div class="button surfaceAction textInverseStandard">Primary</div>
+                <div class="button surfaceInfo textStandard">Info</div>
+                <div class="button surfaceSuccess textInverseStandard">Success</div>
+                <div class="button backgroundSuccess textSuccess">Success alt</div>
+                <div class="button surfaceDestructive textInverseStandard">Error</div>
+                <div class="button backgroundDestructive textDestructive">Error alt</div>
+                <div class="button surfaceDisabled textDisabled">Disabled surface</div>
+                <div class="button surfaceDestructive textInverseStandard">Destructive surface</div>
+                <div class="button surfaceInfo textStandard">Info surface</div>
+                <div class="button surfaceAction textInverseStandard">Action surface</div>
+                <div class="button surfaceActionSecondary textSecondary">Action secondary surface</div>
+                <div class="button surfaceInverseStandard textInverseStandard">Inverse standard surface</div>
+                <div class="button surfaceInverseSecondary textInverseSecondary">Inverse secondary surface</div>
+                <div class="button surfaceInverseDisabled textInverseDisabled">Inverse disabled surface</div>
+            </div>
+            <div class="fifth">
+                <div class="button backgroundTertiary textStandard">Neutral</div>
+                <div class="button surfaceAction textInverseStandard">Primary</div>
+                <div class="button surfaceInfo textStandard">Info</div>
+                <div class="button surfaceSuccess textInverseStandard">Success</div>
+                <div class="button backgroundSuccess textSuccess">Success alt</div>
+                <div class="button surfaceDestructive textInverseStandard">Error</div>
+                <div class="button backgroundDestructive textDestructive">Error alt</div>
+                <div class="button surfaceDisabled textDisabled">Disabled surface</div>
+                <div class="button surfaceDestructive textInverseStandard">Destructive surface</div>
+                <div class="button surfaceInfo textStandard">Info surface</div>
+                <div class="button surfaceAction textInverseStandard">Action surface</div>
+                <div class="button surfaceActionSecondary textSecondary">Action secondary surface</div>
+                <div class="button surfaceInverseStandard textInverseStandard">Inverse standard surface</div>
+                <div class="button surfaceInverseSecondary textInverseSecondary">Inverse secondary surface</div>
+                <div class="button surfaceInverseDisabled textInverseDisabled">Inverse disabled surface</div>
+            </div>
+            <div class="sixth">
+                <div class="button backgroundTertiary textStandard">Neutral</div>
+                <div class="button surfaceAction textInverseStandard">Primary</div>
+                <div class="button surfaceInfo textStandard">Info</div>
+                <div class="button surfaceSuccess textInverseStandard">Success</div>
+                <div class="button backgroundSuccess textSuccess">Success alt</div>
+                <div class="button surfaceDestructive textInverseStandard">Error</div>
+                <div class="button backgroundDestructive textDestructive">Error alt</div>
+                <div class="button surfaceDisabled textDisabled">Disabled surface</div>
+                <div class="button surfaceDestructive textInverseStandard">Destructive surface</div>
+                <div class="button surfaceInfo textStandard">Info surface</div>
+                <div class="button surfaceAction textInverseStandard">Action surface</div>
+                <div class="button surfaceActionSecondary textSecondary">Action secondary surface</div>
+                <div class="button surfaceInverseStandard textInverseStandard">Inverse standard surface</div>
+                <div class="button surfaceInverseSecondary textInverseSecondary">Inverse secondary surface</div>
+                <div class="button surfaceInverseDisabled textInverseDisabled">Inverse disabled surface</div>
+            </div>
+            <div class="seventh">
+                <div class="button backgroundTertiary textStandard">Neutral</div>
+                <div class="button surfaceAction textInverseStandard">Primary</div>
+                <div class="button surfaceInfo textStandard">Info</div>
+                <div class="button surfaceSuccess textInverseStandard">Success</div>
+                <div class="button backgroundSuccess textSuccess">Success alt</div>
+                <div class="button surfaceDestructive textInverseStandard">Error</div>
+                <div class="button backgroundDestructive textDestructive">Error alt</div>
+                <div class="button surfaceDisabled textDisabled">Disabled surface</div>
+                <div class="button surfaceDestructive textInverseStandard">Destructive surface</div>
+                <div class="button surfaceInfo textStandard">Info surface</div>
+                <div class="button surfaceAction textInverseStandard">Action surface</div>
+                <div class="button surfaceActionSecondary textSecondary">Action secondary surface</div>
+                <div class="button surfaceInverseStandard textInverseStandard">Inverse standard surface</div>
+                <div class="button surfaceInverseSecondary textInverseSecondary">Inverse secondary surface</div>
+                <div class="button surfaceInverseDisabled textInverseDisabled">Inverse disabled surface</div>
+            </div>
+            <div class="eighth">
+                <div class="button backgroundTertiary textStandard">Neutral</div>
+                <div class="button surfaceAction textInverseStandard">Primary</div>
+                <div class="button surfaceInfo textStandard">Info</div>
+                <div class="button surfaceSuccess textInverseStandard">Success</div>
+                <div class="button backgroundSuccess textSuccess">Success alt</div>
+                <div class="button surfaceDestructive textInverseStandard">Error</div>
+                <div class="button backgroundDestructive textDestructive">Error alt</div>
+                <div class="button surfaceDisabled textDisabled">Disabled surface</div>
+                <div class="button surfaceDestructive textInverseStandard">Destructive surface</div>
+                <div class="button surfaceInfo textStandard">Info surface</div>
+                <div class="button surfaceAction textInverseStandard">Action surface</div>
+                <div class="button surfaceActionSecondary textSecondary">Action secondary surface</div>
+                <div class="button surfaceInverseStandard textInverseStandard">Inverse standard surface</div>
+                <div class="button surfaceInverseSecondary textInverseSecondary">Inverse secondary surface</div>
+                <div class="button surfaceInverseDisabled textInverseDisabled">Inverse disabled surface</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

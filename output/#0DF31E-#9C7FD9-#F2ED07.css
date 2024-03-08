@@ -1,0 +1,22 @@
+body {
+    --colorTextStandard: #9C7FD9;
+	--colorTextSecondary: #543588;
+	--colorTextDisabled: #838383;
+	--colorTextAction: #f2ed07;
+	--colorTextActionContrast: #d1cc00;
+	--colorTextInverseStandard: #030303;
+	--colorTextInverseSecondary: #222;
+	--colorTextInverseDisabled: #555;
+	--colorBackgroundInverseStandard: #0DF31E;
+	--colorBackgroundInverseSecondary: #77ff72;
+	--colorBackgroundInverseTertiary: #c6ffc1;
+	--colorSurfaceAction: #d1cc00;
+	--colorSurfaceActionHover: #e2dc00;
+	--colorSurfaceInverseStandard: #0DF31E;
+	--colorSurfaceInverseSecondary: #77ff72;
+	--colorSurfaceInverseDisabled: #c6ffc1;
+	--colorIconStandard: #9C7FD9;
+	--backgroundColor: #0DF31E;
+	--textColor: #9C7FD9;
+	--buttonColor: #F2ED07;
+}

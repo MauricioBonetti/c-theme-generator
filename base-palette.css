@@ -1,0 +1,74 @@
+:root {
+    --colorTextStandard: #0a2540;
+    --colorTextSecondary: #476788;
+    --colorTextDisabled: #a6bbd1;
+    --colorTextAction: #006bff;
+    --colorTextActionContrast: #004eba;
+    --colorTextInverseStandard: #ffffff;
+    --colorTextInverseSecondary: #a6bbd1;
+    --colorTextInverseDisabled: #476788;
+    --colorTextInverseAction: #0099ff;
+    --colorTextInverseActionContrast: #8cc6fd;
+    --colorTextSuccess: #0d804b;
+    --colorTextInverseSuccess: #00db75;
+    --colorTextDestructive: #b03200;
+    --colorTextInverseDestructive: #ff906b;
+
+
+    --colorBackgroundStandard: #ffffff;
+    --colorBackgroundSecondary: #f8f9fb;
+    --colorBackgroundTertiary: #e7edf6;
+    --colorBackgroundSuccess: #f1fef8;
+    --colorBackgroundDestructive: #fff4f1;
+    --colorBackgroundInverseStandard: #0a2540;
+    --colorBackgroundInverseSecondary: #0b3558;
+    --colorBackgroundInverseTertiary: #194870;
+
+
+    --colorSurfaceStandard: #ffffff;
+    --colorSurfaceSecondary: #f8f9fb;
+    --colorSurfaceTertiary: #e7edf6;
+    --colorSurfaceDisabled: #d4e0ed;
+    --colorSurfaceSuccess: #0d804b;
+    --colorSurfaceDestructive: #ff4f00;
+    --colorSurfaceInfo: #b8dcff;
+    --colorSurfaceAction: #006bff;
+    --colorSurfaceActionHover: #004eba;
+    --colorSurfaceActionSecondary: #f4f8ff;
+    --colorSurfaceActionSecondaryHover: #e6f0ff;
+    --colorSurfaceInverseStandard: #0a2540;
+    --colorSurfaceInverseSecondary: #0b3558;
+    --colorSurfaceInverseDisabled: #476788;
+
+
+    --colorStrokeStandard: #d4e0ed;
+    --colorStrokeHover: #a6bbd1;
+    --colorStrokeMedium: #a6bbd1;
+    --colorStrokeMediumHover: #476788;
+    --colorStrokeStrong: #476788;
+    --colorStrokeStrongHover: #194870;
+    --colorStrokeFocus: #006bff;
+    --colorStrokeDisabled: #f0f3f8;
+    --colorStrokeSuccess: #14aa51;
+    --colorStrokeDestructive: #d53c00;
+    --colorStrokeInverseStandard: #194870;
+    --colorStrokeInverseHover: #476788;
+    --colorStrokeInverseMedium: #476788;
+    --colorStrokeInverseMediumHover: #a6bbd1;
+    --colorStrokeInverseStrong: #e7edf6;
+    --colorStrokeInverseStrongHover: #f8f9fb;
+    --colorStrokeInverseFocus: #a6bbd1;
+    --colorStrokeInverseDisabled: #0a2540;
+
+
+    --colorIconStandard: #0b3558;
+    --colorIconHover: #0a2540;
+    --colorIconSecondary: #476788;
+    --colorIconActive: #006bff;
+    --colorIconDisabled: #a6bbd1;
+    --colorIconInverseStandard: #ffffff;
+    --colorIconInverseHover: #f8f9fb;
+    --colorIconInverseSecondary: #e7edf6;
+    --colorIconInverseActive: #0099ff;
+    --colorIconInverseDisabled: #a6bbd1;
+}
